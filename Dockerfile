@@ -6,8 +6,13 @@ RUN apt-get update && apt-get install -y \
       dnsutils \
       git \
       iproute2 \
+      iputils-ping \
+      mtr \
       netcat \
+      nmap \
       python3 \
+      tcpdump \
+      traceroute \
       vim \
     && rm -rf /var/lib/apt/lists/* \
     && curl -sfL https://git.io/chezmoi | sh \
