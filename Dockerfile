@@ -19,4 +19,6 @@ RUN apt-get update && apt-get install -y \
     && chezmoi init https://github.com/johnweldon/dotfiles.chezmoi \
     && chezmoi apply
 
-CMD exec /bin/bash -c "trap : TERM INT; sleep infinity & wait"
+CMD [ "-c", "echo 'sleeping. for interactive use pass -i to run or exec args'; trap : TERM INT; sleep infinity & wait"]
+
+ENTRYPOINT ["/bin/bash", "-i"]
